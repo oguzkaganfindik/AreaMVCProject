@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "AddProduct";
+}
+@model Product
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Ürün Ekle</h3>
+            </div>
+            <form asp-action="AddProduct">
+                <div class="card-body">
+                    <div>
+                        <label asp-for="Id">Id</label>
+                        <input asp-for="Id" class="form-control" />
+                    </div>
+                    <div>
+                        <label asp-for="Name">Ürün Adı</label>
+                        <input asp-for="Name" class="form-control" />
+                    </div>
+                    <div>
+                        <label asp-for="Stock">Stok Miktarı</label>
+                        <input asp-for="Stock" class="form-control" />
+                    </div>
+                    <div>
+                        <label asp-for="Category">Kategori</label>
+                        <input asp-for="Category" class="form-control" />
+                    </div>
+                    <div>
+                        <label asp-for="CreatedDate">Eklenme Tarihi</label>
+                        <input type="date" asp-for="CreatedDate" class="form-control" />
+                    </div>
+                </div>
+                <div class="card-footer" style="height:50px;">
+                    <button type="submit" class="btn btn-outline-success btn-sm float-end">Kaydet</button>
+                    <a asp-area="Admin" asp-controller="Products" asp-action="Index" class="btn btn-outline-primary btn-sm float-start">Geri Dön</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
