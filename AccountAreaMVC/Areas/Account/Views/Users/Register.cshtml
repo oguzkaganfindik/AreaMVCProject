@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Register";
+}
+@model User
+
+
+<div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Kayıt Ol</h3>
+            </div>
+            <form asp-action="Register">
+                <div class="card-body">
+                    <div>
+                        <label asp-for="Email"></label>
+                        <input asp-for="Email" class="form-control" />
+                    </div>
+                    <div>
+                        <label asp-for="UserName"></label>
+                        <input asp-for="UserName" class="form-control" />
+                    </div>
+                    <div>
+                        <label asp-for="Password"></label>
+                        <input type="password" asp-for="Password" class="form-control" />
+                    </div>
+                </div>
+                <div class="card-footer" style="height:50px">
+                    <input type="submit" class="btn btn-outline-success float-end btn-sm" value="Kayıt Ol" />
+                    <a asp-area="Account" asp-controller="Users" asp-action="LogIn" class="btn btn-outline-info btn-sm float-start">Giriş Yap</a>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+</div>
+
